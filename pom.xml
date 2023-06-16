@@ -40,11 +40,11 @@
                             <build>
                                 <assembly>
                                     <descriptorRef>artifact</descriptorRef>
-                                    <dockerFile>Dockerfile</dockerFile>
                                     <tags>
                                         <tag>latest</tag>
                                     </tags>
                                 </assembly>
+                                <dockerFile>Dockerfile</dockerFile>
                             </build>
                         </image>
                     </images>
