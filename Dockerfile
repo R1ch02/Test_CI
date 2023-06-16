@@ -1,4 +1,7 @@
 FROM openjdk:17
 WORKDIR /app
-ADD /target/*es.jar ./ci_test.jar
-ENTRYPOINT ["java", "-jar","./ci_test.jar"]
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
+RUN ./mvnw dependency:resolve
+COPY src ./src
+CMD ["./mvnw","docker:build"]
