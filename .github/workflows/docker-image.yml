@@ -20,6 +20,6 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ./Dockerfile
+          context: .
           push: true
           tags: r1ch02/ci-test-rep:latest
