@@ -6,6 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+      </profile>
+      <profile name="Annotation profile for Test_CI" enabled="true">
+        <sourceOutputDir name="docker/generated-sources/annotations" />
+        <sourceTestOutputDir name="docker/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
         <module name="Test_CI" />
       </profile>
     </annotationProcessing>
