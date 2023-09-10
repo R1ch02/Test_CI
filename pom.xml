@@ -19,11 +19,11 @@
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/io.fabric8/docker-maven-plugin -->
-        <dependency>
-            <groupId>io.fabric8</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <version>0.43.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>io.fabric8</groupId>-->
+<!--            <artifactId>docker-maven-plugin</artifactId>-->
+<!--            <version>0.43.0</version>-->
+<!--        </dependency>-->
 
     </dependencies>
 
@@ -55,36 +55,36 @@
                     </execution>
                 </executions>
             </plugin>
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.43.0</version>
-                <executions>
-                    <execution>
-                        <id>start</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <images>
-                        <image>
-                            <name>ci-test</name>
-                            <build>
-                                <assembly>
-                                    <descriptorRef>artifact</descriptorRef>
-                                </assembly>
-                                <tags>
-                                    <tag>latest</tag>
-                                </tags>
-                                <dockerFile>../../../docker/Dockerfile</dockerFile>
-                            </build>
-                        </image>
-                    </images>
-                </configuration>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>io.fabric8</groupId>-->
+<!--                <artifactId>docker-maven-plugin</artifactId>-->
+<!--                <version>0.43.0</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <id>start</id>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>build</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--                <configuration>-->
+<!--                    <images>-->
+<!--                        <image>-->
+<!--                            <name>ci-test</name>-->
+<!--                            <build>-->
+<!--                                <assembly>-->
+<!--                                    <descriptorRef>artifact</descriptorRef>-->
+<!--                                </assembly>-->
+<!--                                <tags>-->
+<!--                                    <tag>latest</tag>-->
+<!--                                </tags>-->
+<!--                                <dockerFile>../../../docker/Dockerfile</dockerFile>-->
+<!--                            </build>-->
+<!--                        </image>-->
+<!--                    </images>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 
